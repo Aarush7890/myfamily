@@ -1,0 +1,49 @@
+<html>
+
+<head>
+    <title>C79</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body style="text-align: center;">
+    <h1>My family book</h1>
+    <img src="" style="width:280px; height:340px; " id="family_member_image">
+    <h4 id="family_member_name"></h4>
+    <button type="button" id="nextbutton" onclick="update();">Next</button>;
+
+    <script>
+        var img = [
+            "https://as2.ftcdn.net/jpg/01/15/47/87/500_F_115478791_GG0yIcVA8Mhe6MAXEvgcfyL7JtuVfYvm.jpg",
+            "https://us.123rf.com/450wm/ylivdesign/ylivdesign1605/ylivdesign160500244/56085314-dad-icon-in-cartoon-style-on-a-white-background.jpg?ver=6",
+            "https://i.pinimg.com/originals/69/63/da/6963da727ae14c051f9d4644061a56bc.jpg",
+            "https://us.123rf.com/450wm/yupiramos/yupiramos1905/yupiramos190505227/122760736-little-girl-avatar-character-vector-illustration-design.jpg?ver=6",
+            "https://thumbs.dreamstime.com/b/small-baby-cartoon-minimalism-character-illustration-isolated-image-small-baby-cartoon-minimalism-character-123813461.jpg",
+            "https://t3.ftcdn.net/jpg/02/62/72/10/360_F_262721041_9mNNRQadoz552DN2NTFNbGBHN14K9D58.jpg",
+            "https://image.shutterstock.com/image-illustration/cartoon-old-woman-cane-260nw-1376524529.jpg",
+            ""
+        ];
+        var names = [
+            "Mother",
+            "Father",
+            "Big brother",
+            "Sister",
+            "Young brother",
+            "Grandfather",
+            "Grandmother"
+        ];
+        var i = 0;
+
+        function update() {
+            i++;
+            var numbers_of_family_members_in_arry=7
+            if (i>numbers_of_family_members_in_arry)
+            {
+                i=0
+            }
+            var updateimg=img[i];
+            var updatename=names[i];
+            document.getElementById("family_member_image").src = updateimg;
+            document.getElementById("family_member_name").innerHTML = updatename;
+        }
+    </script>
+    </body>
+    </html>
